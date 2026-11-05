@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 
 print("Current folder:", os.getcwd())
+print("Current folder contents:", os.listdir(os.getcwd()))
 
 load_dotenv(dotenv_path=".env", override=True)
 
