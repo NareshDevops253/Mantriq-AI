@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Route.AI</title>
+
+    <link rel="stylesheet" href="./Route.Ai.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Route.ai Roadway Logo.png" alt="Route.AI Logo">
+            <h2>Route.AI</h2>
+        </div>
+
+        <button type="button" class="new-chat" onclick="newChat()">
+            <span>＋</span> New Chat
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="menu">
+            <h4>MENU</h4>
+
+            <button type="button" onclick="newChat()">
+                🔍 Search
+            </button>
+
+            <button type="button" onclick="showMessage('Projects')">
+                📁 Projects
+            </button>
+
+            <button type="button" onclick="showMessage('Code')">
+                💻 Code
+            </button>
+
+            <button type="button" onclick="showMessage('Customize')">
+                ⚙️ Customize
+            </button>
+        </nav>
+
+        <!-- Chat History -->
+        <div class="history-section">
+            <h4>CHAT HISTORY</h4>
+            <div id="chatHistory">
+                <!-- History buttons are added by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-bottom">
+            <div class="footer-logo">R</div>
+            <div>
+                <p>Route.AI</p>
+                <small>Your AI assistant</small>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Top Header -->
+        <header class="topbar">
+            <div class="topbar-title">
+                <span class="status-dot"></span>
+                <h3 id="chatTitle">New Chat</h3>
+            </div>
+
+            <button type="button" class="profile" title="Profile">
+                N
+            </button>
+        </header>
+
+        <!-- Chat Messages -->
+        <section class="chat-area" id="chatArea">
+
+            <!-- Welcome Screen -->
+            <div class="welcome" id="welcome">
+                <div class="welcome-icon">
+                    <img
+                        src="Route.ai Roadway Logo.png"
+                        alt="Route.AI"
+                    >
+                </div>
+
+                <p class="welcome-label">YOUR AI TRAVEL & LEARNING ASSISTANT</p>
+
+                <h1>Welcome to Route.AI</h1>
+
+                <h2>How can I help you today?</h2>
+
+                <p class="welcome-description">
+                    Ask questions, explore ideas, plan your journey,
+                    or get help with code.
+                </p>
+            </div>
+
+            <!-- Suggestion Buttons -->
+            <div class="suggestions" id="suggestions">
+
+                <button
+                    type="button"
+                    onclick="setPrompt('Explain Python fundamentals')"
+                >
+                    <span>💻</span>
+                    <span>
+                        <strong>Learn Python</strong>
+                        <small>Understand programming basics</small>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    onclick="setPrompt('Help me build a project')"
+                >
+                    <span>🚀</span>
+                    <span>
+                        <strong>Build a project</strong>
+                        <small>Create something useful</small>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    onclick="setPrompt('Explain large language models')"
+                >
+                    <span>🤖</span>
+                    <span>
+                        <strong>Explore AI</strong>
+                        <small>Understand large language models</small>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    onclick="setPrompt('Help me plan a route')"
+                >
+                    <span>🗺️</span>
+                    <span>
+                        <strong>Plan a route</strong>
+                        <small>Start planning your journey</small>
+                    </span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Message Input -->
+        <form class="input-container" id="chatForm">
+
+            <textarea
+                id="userInput"
+                placeholder="Message Route.AI..."
+                rows="1"
+                required
+            ></textarea>
+
+            <div class="input-bottom">
+                <span class="input-hint">
+                    Ask questions or explore an idea
+                </span>
+
+                <button
+                    type="submit"
+                    id="sendButton"
+                    aria-label="Send message"
+                    title="Send message"
+                >
+                    ↑
+                </button>
+            </div>
+
+        </form>
+
+        <!-- Disclaimer -->
+        <p class="disclaimer">
+            Route.AI can make mistakes. Verify important information.
+        </p>
+
+    </main>
+
+    <!-- Your existing JavaScript -->
+    <script src="./Route.ai.js" defer></script>
+
+</body>
+</html>
